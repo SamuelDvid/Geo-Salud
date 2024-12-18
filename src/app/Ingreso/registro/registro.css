@@ -1,0 +1,182 @@
+/* General */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Contenedor del formulario */
+.form-container {
+    width: 800px;
+    margin: 5rem auto;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    animation: fadeInForm 1.5s ease-in-out;
+}
+
+/* Título */
+.form-container h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #0077b6;
+    margin-bottom: 1.5rem;
+}
+
+/* Inputs y botones */
+input[type="text"],
+input[type="number"],
+input[type="password"],
+button[type="submit"],
+button[type="button"] {
+    width: 80%;
+    padding: 1rem;
+    margin: 0.8rem 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+/* Estilos de inputs */
+input::placeholder {
+    color: #aaa;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus {
+    border-color: #0077b6;
+    box-shadow: 0 0 10px rgba(0, 119, 182, 0.3);
+    outline: none;
+}
+
+/* Botón principal */
+button[type="submit"] {
+    background-color: #0077b6;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #005f9e;
+    transform: scale(1.05);
+}
+
+button[type="submit"]:active {
+    transform: scale(0.95);
+}
+
+/* Botón adicional (para añadir EPS) */
+button[type="button"] {
+    background-color: #ffca2c;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button[type="button"]:hover {
+    background-color: #e6b022;
+    transform: scale(1.05);
+}
+
+button[type="button"]:active {
+    transform: scale(0.95);
+}
+
+/* Sección EPS */
+.eps-section {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.eps-item {
+    display: inline-block;
+    background-color: #e7f3fe;
+    color: #0077b6;
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    margin: 0.5rem;
+    font-weight: bold;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    transition: transform 0.2s ease;
+}
+
+.eps-item:hover {
+    transform: scale(1.05);
+}
+
+.eps-item button {
+    background: none;
+    border: none;
+    color: #d32f2f;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-left: 8px;
+    transition: color 0.3s ease;
+}
+
+.eps-item button:hover {
+    color: #b71c1c;
+}
+
+/* Tooltip */
+input[title],
+button[title] {
+    position: relative;
+}
+
+input[title]:hover::after,
+button[title]:hover::after {
+    content: attr(title);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #333;
+    color: #fff;
+    padding: 0.5rem;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+/* Margen y texto */
+p {
+    font-weight: bold;
+    color: #555;
+    margin-top: 1rem;
+}
+
+span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+/* Animación */
+@keyframes fadeInForm {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
